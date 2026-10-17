@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Política de Privacidade — BUEVYA</h1>
-<p class="meta">Última atualização: 16/10/2026</p>
+<p class="meta">Última atualização: 17/10/2026</p>
 
 <p>O BUEVYA é um assistente de uso pessoal que registra, a partir de mensagens de WhatsApp, os custos e as vendas
 de veículos de Nicolas Matheus Bueno (“responsável”). Ele não é oferecido ao público: só processa mensagens de
@@ -30,6 +30,8 @@ Proteção de Dados (Lei nº 13.709/2018 — LGPD), quais dados são tratados e 
   <li>o texto da mensagem, para entender o pedido;</li>
   <li>o identificador da mensagem atribuído pelo WhatsApp.</li>
 </ul>
+<p>O aviso enviado pela Meta também traz o nome de perfil do WhatsApp de quem enviou a mensagem; o assistente
+recebe esse dado, mas não o utiliza nem o guarda.</p>
 <p>Desses, ficam <strong>guardados</strong> apenas:</p>
 <ul>
   <li><strong>dados dos veículos e financeiros</strong> informados: modelo, placa, ano, versão, origem (leilão,
@@ -51,8 +53,10 @@ serviços de inteligência artificial de terceiros.</p>
   <li>Garantir que somente números autorizados usem o assistente.</li>
 </ul>
 <p>Os dados não são vendidos nem compartilhados para fins de publicidade. Eles podem ser tratados apenas pelos
-prestadores necessários ao funcionamento do sistema, como a Meta (WhatsApp Business Platform), que transmite as
-mensagens, e a Microsoft (OneDrive), que armazena a planilha, conforme descrito na seção 3.</p>
+prestadores necessários ao funcionamento do sistema: a Meta (WhatsApp Business Platform), que transmite as
+mensagens; a Cloudflare, que fornece a conexão segura entre a Meta e o computador do responsável; e a Microsoft
+(OneDrive), que armazena a planilha, conforme descrito na seção 3. Esses prestadores podem tratar os dados em
+servidores localizados fora do Brasil, de acordo com os termos de cada um.</p>
 
 <h2>3. Onde os dados ficam</h2>
 <ul>
@@ -61,16 +65,19 @@ mensagens, e a Microsoft (OneDrive), que armazena a planilha, conforme descrito 
       técnicos</strong> no computador pessoal do responsável, onde o assistente é executado.</li>
   <li>As mensagens e respostas trafegam pela <strong>WhatsApp Business Platform, da Meta</strong>, que as trata
       conforme os próprios termos e política de privacidade.</li>
-  <li>Para receber mensagens do WhatsApp, o assistente usará uma conexão HTTPS criptografada entre a Meta e o
-      computador do responsável. Esta política será atualizada com o nome do provedor dessa conexão antes que o
-      recebimento de mensagens reais seja ativado.</li>
+  <li>Para receber mensagens do WhatsApp, o assistente usa um túnel da <strong>Cloudflare</strong> (Cloudflare
+      Tunnel): os avisos de mensagem enviados pela Meta chegam por HTTPS aos servidores da Cloudflare e seguem, por
+      uma conexão criptografada aberta pelo próprio computador, até o assistente. Nesse trajeto a Cloudflare
+      processa o conteúdo dos avisos (número, nome de perfil e texto) apenas para entregá-los, conforme os
+      próprios termos e política de privacidade; o assistente não pede a ela que guarde esse conteúdo.</li>
 </ul>
 
 <h2>4. Registros técnicos</h2>
 <p>Enquanto funciona, o assistente grava no computador do responsável um registro técnico com data e hora de
 eventos como início do serviço, mensagem ignorada, mensagem repetida, assinatura inválida e falha no envio de
 uma resposta. Os números de telefone aparecem só com os 4 últimos dígitos e o texto das
-mensagens não é registrado. Se ocorrer um erro inesperado, o registro pode conter detalhes técnicos do lançamento
+mensagens não é registrado. O programa do túnel registra apenas dados técnicos da conexão (abertura, endereço
+público do túnel, endereços de rede do próprio computador e falhas), sem o conteúdo das mensagens. Se ocorrer um erro inesperado, o registro pode conter detalhes técnicos do lançamento
 que falhou. O registro é substituído sempre que o assistente é reiniciado.</p>
 
 <h2>5. Como os dados são protegidos</h2>
@@ -86,12 +93,15 @@ que falhou. O registro é substituído sempre que o assistente é reiniciado.</p
 
 <h2>6. Por quanto tempo os dados são mantidos</h2>
 <p>Enquanto o responsável utilizar o assistente, ou até que a exclusão seja solicitada. Das cópias de segurança,
-apenas as 30 mais recentes são mantidas; as mais antigas são apagadas automaticamente. O OneDrive pode manter
-versões anteriores da planilha e itens excluídos na lixeira por um período definido pela Microsoft; na exclusão,
-esses itens também são removidos.</p>
+apenas as 30 mais recentes são mantidas; as mais antigas são apagadas automaticamente. O OneDrive guarda versões
+anteriores da planilha e mantém arquivos excluídos na lixeira por um período definido pela Microsoft. Num pedido
+de exclusão, o responsável apaga manualmente a planilha, as cópias de segurança e os registros técnicos e esvazia
+a lixeira do OneDrive; a remoção definitiva de versões e itens excluídos nos servidores da Microsoft segue os
+prazos e as regras da própria Microsoft.</p>
 
 <h2>7. Seus direitos e exclusão de dados</h2>
-<p>Você pode pedir confirmação, acesso, correção ou exclusão dos seus dados, conforme o art. 18 da LGPD, pelo
+<p>Você pode pedir confirmação, acesso, correção ou exclusão dos seus dados, entre os demais direitos previstos
+no art. 18 da LGPD, pelo
 e-mail <a href="mailto:contato.buevya@hotmail.com">contato.buevya@hotmail.com</a>. As solicitações são respondidas
 em até 15 dias, como compromisso de atendimento, respeitando os prazos legais aplicáveis. Veja o procedimento em
 <a href="exclusao-de-dados.html">Instruções para exclusão de dados</a>.</p>
